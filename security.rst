@@ -2117,9 +2117,10 @@ Prepending the path with ``^`` means that only URLs *beginning* with the
 pattern are matched. For example, a path of ``/admin`` (without the ``^``)
 would match ``/admin/foo`` but would also match URLs like ``/foo/admin``.
 
-Each ``access_control`` can also match on IP address, hostname and HTTP methods.
+Each ``access_control`` can also match on IP address, hostname and HTTP methods or be directly configured by passing a service implementing `RequestMatcherInterface` through the `request_matcher` option.
 It can also be used to redirect a user to the ``https`` version of a URL pattern.
 See :doc:`/security/access_control`.
+
 
 .. _security-securing-controller:
 
