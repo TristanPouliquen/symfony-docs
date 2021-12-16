@@ -166,6 +166,10 @@ if ``ip``, ``port``, ``host`` or ``method`` are not specified for an entry, that
     :ref:`Deny access in PHP code <security-securing-controller>` if you want
     to disallow access based on ``$_GET`` parameter values.
 
+.. notice::
+
+    If you have a custom request matcher, you can use the ``request_matcher`` option to specify the service reference to an access control item. Symfony will use this service as the request matcher for this item and won't take into account other matching options. 
+
 .. _security-access-control-enforcement-options:
 
 2. Access Enforcement
